@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic expense tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="container">
+        <div class="header">
+            <b style="font-size: 2.5em">💰</b>
+            <h1>Expense Tracker</h1>
+            <p>Track your expenses, spending and manage your budget</p>
+        </div>
+
+        <div class="summary-cards">
+            <div class="summary-card">
+                <h3>Total Expenses</h3>
+                <div class="amount" id="totalExpenses">$0.00</div>
+            </div>
+            <div class="summary-card">
+                <h3>This Month</h3>
+                <div class="amount" id="monthlyExpenses">$0.00</div>
+            </div>
+            <div class="summary-card">
+                <h3>Transactions</h3>
+                <div class="amount" id="transactionCount">$0.00</div>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="form-section">
+                <h2>Add a new expense</h2>
+                <form id="expenseForm">
+                    <div class="form-group">
+                        <label for="description">Description</label>
+                        <input type="text" id="description" placeholder="What did you spend on...?" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="amount">Amount ($)</label>
+                        <input type="text" id="amount" step="0.01" placeholder="$0.00" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="category">Category</label>
+                        <select id="category" required>
+                            <option value="">Select a category</option>
+                            <option value="food">🍔 Food & Dining</option>
+                            <option value="transport">🚗 Transportation</option>
+                            <option value="entertainment">🎬 Entertainment</option>
+                            <option value="shopping">🛍️ Shopping</option>
+                            <option value="bills">📋 Bills & Utilities</option>
+                            <option value="other">📝 Others</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="date">Date</label>
+                        <input type="date" id="date" required>
+                    </div>
+
+                    <button type="submit" class="btn">Add Expense</button>
+                </form>
+            </div>
+
+            <div class="chart-section">
+                <h2>Category breakdown</h2>
+                <div class="chart-container">
+                    <canvas id="expenseChart" width="400" height="300"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <div class="expenses-list">
+            <h2>Recent Expenses</h2>
+            <div id="expensesList"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
