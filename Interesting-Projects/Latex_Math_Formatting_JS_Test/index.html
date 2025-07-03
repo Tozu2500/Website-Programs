@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latex math formatting test - Student learning site</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Pure JS Latex math renderer</h1>
+    <p>No external libraries test</p>
+
+    <div class="math-container">
+        <label for="mathInput">Enter Latex math expression: </label>
+        <input type="text" id="mathInput" class="latex-input" placeholder="Try: x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}"
+        value="x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}">
+
+        <div class="example-button">
+            <button class="example-btn" onclick="setExample('\\frac{a}{b} + \\frac{c}{d} = \\frac{ad + bc}{bd}')">Fractions</button>
+            <button class="example-btn" onclick="setExample('e^{i\\pi} + 1 = 0')">Euler's Identity</button>
+            <button class="example-btn" onclick="setExample('\\sqrt{x^2 + y^2}')">Square Root</button>
+            <button class="example-btn" onclick="setExample('\\int_0^\\infty e^{-x} dx')">Integral</button>
+            <button class="example-btn" onclick="setExample('\\sum_{n=1}^{\\infty} \\frac{1}{n^2}')">Sum</button>
+            <button class="example-btn" onclick="setExample('\\alpha + \\beta = \\gamma')">Greek Letters</button>
+            <button class="example-btn" onclick="setExample('\\begin{pmatrix} a & b \\\\\\\\ c & d \\end{pmatrix}')">Matrix</button>
+        </div>
+        <div class="math-output" id="mathOutput"></div>
+    </div>
+    <script src="script.js" defer></script>
+</body>
+</html>

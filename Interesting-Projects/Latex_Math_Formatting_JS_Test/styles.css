@@ -1,0 +1,186 @@
+body {
+    font-family: "Arial";
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    line-height: 2;
+}
+
+.math-container {
+    border: 2px solid #ddd;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 20px 0;
+    background: #f9f9f9;
+}
+
+.latex-input {
+    width: 90%;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-family:'Courier New', Courier, monospace;
+    font-size: 14px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+}
+
+.math-output {
+    min-height: 60px;
+    padding: 20px;
+    background: white;
+    margin-top: 20px;
+    border: 1px solid #aaa;
+    border-radius: 6px;
+    font-size: 20px;
+    line-height: 1.8;
+}
+
+/* Mathematical styling part */
+.fraction {
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    position: relative;
+}
+
+.fraction .numerator {
+    display: block;
+    border-bottom: 1px solid #000;
+    padding-bottom: 2px;
+    margin-bottom: 2px;
+}
+
+.fraction .denominator {
+    display: block;
+    padding-top: 2px;
+}
+
+.superscript {
+    vertical-align: super;
+    font-size: 0.7em;
+    position: relative;
+    top: -0.015em;
+}
+
+.subscript {
+    vertical-align: sub;
+    font-size: 0.7em;
+    position: relative;
+    bottom: -0.3em;
+}
+
+.sqrt {
+    position: relative;
+    padding-left: 0.5em;
+}
+
+.sqrt::before {
+    content: '√';
+    font-size: 1.2em;
+    position: absolute;
+    left: -4px;
+}
+
+.sqrt .radicand {
+    border-top: 1px solid #000;
+    padding-top: 2px;
+}
+
+.integral {
+    font-size: 1.8em;
+    vertical-align: middle;
+}
+
+.sum {
+    position: relative;
+    display: inline-block;
+    font-size: 1.5em;
+    margin: 0 0.3em;
+}
+
+.sum-limits {
+    position: absolute;
+    font-size: 0.6em;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.sum-upper {
+    top: -1em;
+}
+
+.sum-lower {
+    bottom: -1em;
+}
+
+.matrix {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+}
+
+.matrix::before,
+.matrix::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
+}
+
+.matrix::before {
+    left: -5px;
+    border-left: 2px solid #000;
+}
+
+.matrix::after {
+    right: -5px;
+    border-right: 2px solid #000;
+}
+
+.matrix-content {
+    padding: 5px 10px;
+}
+
+.matrix-row {
+    display: table-row;
+}
+
+.matrix-cell {
+    display: table-cell;
+    padding: 5px 10px;
+    text-align: center;
+}
+
+.greek {
+    font-style: italic;
+}
+
+.example-buttons {
+    margin: 15px 0;
+}
+
+.example-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    margin: 4px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 250ms;
+}
+
+.example-btn:hover {
+    background-color: #0056b3;
+}
+
+.error {
+    color: #dc3545;
+    font-style: italic;
+}
