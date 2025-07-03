@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE-Edge">
+    <title>VirtualKeyboard API</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <div class="container">
+        <h1>VirtualKeyboard API Demo</h1>
+
+        <div class="keyboard-info">
+            <h3>API Support Status</h3>
+            <p id="supportStatus">Checking Support...</p>
+        </div>
+
+        <div class="controls">
+            <button id="showBtn">Show Keyboard</button>
+            <button id="hideBtn">Hide Keyboard</button>
+            <button id="overlaysBtn">Toggle Overlays</button>
+        </div>
+        
+        <div class="status" id="statusDisplay">
+            Status: Ready
+        </div>
+
+        <div class="input-group">
+            <label for="textInput">Text Input:</label>
+            <input type="text" id="textInput" placeholder="Tap here to show virtual keyboard">
+        </div>
+
+        <div class="input-group">
+            <label for="emailInput">Email Input:</label>
+            <input type="email" id="emailInput" placeholder="Enter your email">
+        </div>
+
+        <div class="input-group">
+            <label for="numberInput">Number Input:</label>
+            <input type="number" id="numberInput" placeholder="Enter a number">
+        </div>
+
+        <div class="input-group">
+            <label for="textArea">Text Area:</label>
+            <textarea id="textArea" rows="4" placeholder="Type a longer message here..."></textarea>
+        </div>
+
+        <div class="keyboard-info">
+            <h3>Virtual Keyboard Geometry</h3>
+            <div class="geometry-display">
+                <div class="geometry-item">
+                    <div>Height</div>
+                    <div class="geometry-value" id="keyboardHeight">0px</div>
+                </div>
+                <div class="geometry-item">
+                    <div>Width</div>
+                    <div class="geometry-value" id="keyboardWidth">0px</div>
+                </div>
+                <div class="geometry-item">
+                    <div>Top</div>
+                    <div class="geometry-value" id="keyboardTop">0px</div>
+                </div>
+                <div class="geometry-item">
+                    <div>Left</div>
+                    <div class="geometry-value" id="keyboardLeft">0px</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,141 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    color: white;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+    box-sizing: border-box;
+    transform: all 0.3s ease;
+}
+
+input:focus textarea:focus {
+    outline: none;
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3);
+}
+
+.controls {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transform: all 0.3s ease;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+button:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.status {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-family: monospace;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.keyboard-info {
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    border: 8px;
+    margin-top: 20px;
+}
+
+.supported {
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+.not-supported {
+    color: #f44336;
+    font-weight: bold;
+}
+
+.geometry-display {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.geometry-item {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border-radius: 6px;
+    text-align: center;
+}
+
+.geometry-value {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #FFD700;
+}
+
+@media (max-width: 480px) {
+    .controls {
+        flex-direction: column;
+    }
+
+    button {
+        width: 100%;
+    }
+}
