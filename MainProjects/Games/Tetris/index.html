@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tetris Game in Vanilla JS</title>
+    <title>Tetris Clone</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -26,25 +26,25 @@
                 <div id="lines">0</div>
             </div>
         </div>
-
+        
         <div class="main-game">
             <canvas id="gameCanvas" width="300" height="600"></canvas>
             <div id="gameOver" class="game-over hidden">
                 <h1>GAME OVER</h1>
                 <p>Score: <span id="finalScore">0</span></p>
-                <button id="restartButton">Play Again</button>
+                <button id="restartButton">PLAY AGAIN</button>
             </div>
         </div>
-
+        
         <div class="right-panel">
-            <div class="right-section">
+            <div class="panel-section">
                 <h2>NEXT</h2>
                 <canvas id="nextCanvas1" width="120" height="120"></canvas>
                 <canvas id="nextCanvas2" width="120" height="120"></canvas>
                 <canvas id="nextCanvas3" width="120" height="120"></canvas>
             </div>
             <div class="panel-section controls-info">
-                <h2>Controls</h2>
+                <h2>CONTROLS</h2>
                 <div class="control-item">← → Move</div>
                 <div class="control-item">↓ Soft Drop</div>
                 <div class="control-item">Space Hard Drop</div>
@@ -54,7 +54,7 @@
             </div>
         </div>
     </div>
-
+    
     <script type="module" src="main.js"></script>
 </body>
 </html>
