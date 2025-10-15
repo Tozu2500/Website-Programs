@@ -1,5 +1,5 @@
-import { PIECE_TYPES } from "./constants";
-import { Piece } from "./piece";
+import { PIECE_TYPES } from './constants.js';
+import { Piece } from './Piece.js';
 
 export class PieceGenerator {
     constructor() {
@@ -31,7 +31,7 @@ export class PieceGenerator {
         if (this.bag.length === 0) {
             this.bag = this.generateBag();
         }
-
+        
         const type = this.bag.pop();
         return new Piece(type);
     }
@@ -92,7 +92,7 @@ export class PieceGenerator {
     swapNextPieces(index1, index2) {
         if (index1 >= 0 && index1 < this.nextPieces.length &&
             index2 >= 0 && index2 < this.nextPieces.length) {
-            [this.nextPieces[index1], this.nextPieces[index2]] =
+            [this.nextPieces[index1], this.nextPieces[index2]] = 
             [this.nextPieces[index2], this.nextPieces[index1]];
         }
     }
