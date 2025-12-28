@@ -1,0 +1,240 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 500px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.header h1 {
+    color: #fff;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    background: linear-gradient(135deg, #06b6d4 0%, #3b82f6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.header p {
+    color: #94a3b8;
+    font-size: 1rem;
+}
+
+.dropdown-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.dropdown-label {
+    color: #e2e8f0;
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.dropdown-container {
+    position: relative;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.dropdown-container:hover {
+    border-color: rgba(6, 182, 212, 0.3);
+}
+
+.dropdown-container.open {
+    border-color: #06b6d4;
+    box-shadow: 0 0 0 3px rgba(6, 182, 212, 0.1);
+}
+
+.dropdown-input {
+    width: 100%;
+    padding: 16px 48px 16px 16px;
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 1rem;
+    outline: none;
+    cursor: pointer;
+}
+
+.dropdown-input::placeholder {
+    color: #64748b;
+}
+
+.dropdown-arrow {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    pointer-events: none;
+    transition: transform 0.3s ease;
+}
+
+.dropdown-arrow svg {
+    width: 100%;
+    height: 100%;
+    stroke: #06b6d4;
+}
+
+.dropdown-container.open .dropdown-arrow {
+    transform: translateY(-50%) rotate(180deg);
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    right: 0;
+    background: rgba(30, 41, 59, 0.95);
+    backdrop-filter: blur(20px);
+    border: 2px solid rgba(6, 182, 212, 0.3);
+    border-radius: 12px;
+    max-height: 300px;
+    overflow-y: auto;
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+}
+
+.dropdown-menu.show {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: all;
+}
+
+.dropdown-menu::-webkit-scrollbar {
+    width: 8px;
+}
+
+.dropdown-menu::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 4px;
+}
+
+.dropdown-menu::-webkit-scrollbar-thumb {
+    background: #06b6d4;
+    border-radius: 4px;
+}
+
+.dropdown-item {
+    padding: 14px 16px;
+    color: #e2e8f0;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border-left: 3px solid transparent;
+}
+
+.dropdown-item:hover {
+    background: rgba(6, 182, 212, 0.1);
+    border-left-color: #06b6d4;
+    color: #fff;
+}
+
+.dropdown-item.focused {
+    background: rgba(6, 182, 212, 0.15);
+    border-left-color: #06b6d4;
+    color: #fff;
+}
+
+.dropdown-item.selected {
+    background: rgba(6, 182, 212, 0.2);
+    border-left-color: #3b82f6;
+    color: #fff;
+    font-weight: 600;
+}
+
+.no-results {
+    padding: 20px;
+    text-align: center;
+    color: #64748b;
+    font-style: italic;
+}
+
+.selected-value {
+    margin-top: 30px;
+    padding: 20px;
+    background: rgba(6, 182, 212, 0.1);
+    border: 2px solid rgba(6, 182, 212, 0.3);
+    border-radius: 12px;
+    text-align: center;
+}
+
+.selected-value-label {
+    color: #94a3b8;
+    font-size: 0.875rem;
+    margin-bottom: 8px;
+}
+
+.selected-value-text {
+    color: #06b6d4;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.keyboard-hints {
+    margin-top: 30px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.keyboard-hints h3 {
+    color: #e2e8f0;
+    font-size: 0.875rem;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.hint {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+
+.key {
+    background: rgba(6, 182, 212, 0.2);
+    color: #06b6d4;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    min-width: 60px;
+    text-align: center;
+}
+
+.hint-text {
+    color: #94a3b8;
+    font-size: 0.875rem;
+}

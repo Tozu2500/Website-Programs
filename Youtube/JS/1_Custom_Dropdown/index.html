@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Searchable Dropdown</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="container">
+        <div class="header">
+            <h1>Custom Dropdown</h1>
+            <p>Searchable with keyboard navigation</p>
+        </div>
+
+        <div class="dropdown-wrapper">
+            <label class="dropdown-label">Select a programming language</label>
+            <div class="dropdown-container" id="dropdown">
+                <input type="text"
+                    class="dropdown-input"
+                    id="dropdownInput"
+                    placeholder="Search or select..."
+                    autocomplete="off"
+                >
+                <div class="dropdown-arrow">
+                    <svg fill="none" viewBox="0 0 24 24" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </div>
+                <div class="dropdown-menu" id="dropdownMenu"></div>
+            </div>
+        </div>
+
+        <div class="selected-value" id="selectedValue" style="display: none;">
+            <div class="selected-value-label">Selected:</div>
+            <div class="selected-value-text" id="selectedText">None</div>
+        </div>
+
+        <div class="keyboard-hints">
+            <h3>⌨️ Keyboard Shortcuts</h3>
+            <div class="hint">
+                <span class="key">↑ ↓</span>
+                <span class="hint-text">Navigate options</span>
+            </div>
+            <div class="hint">
+                <span class="key">Enter</span>
+                <span class="hint-text">Select option</span>
+            </div>
+            <div class="hint">
+                <span class="key">Esc</span>
+                <span class="hint-text">Close dropdown</span>
+            </div>
+            <div class="hint">
+                <span class="key">Type</span>
+                <span class="hint-text">Search & filter</span>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
